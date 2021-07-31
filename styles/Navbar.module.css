@@ -1,0 +1,101 @@
+.Container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+
+.Row {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.RooterContainer {
+  width: 100%;
+  background-color: none;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavBarContainer {
+  background-color: #f1f1f1;
+  padding: 50px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  zindex: 99;
+}
+
+.ReactiveNavContainer {
+  background-color: aquamarine;
+  padding: 50px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  zindex: 99;
+}
+
+.Logo {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 0px 0px;
+  transition: 4s;
+  color: blue;
+}
+
+.NavLinks {
+  align-items: center;
+}
+
+.ReactiveNavLinks {
+  position: absolute;
+  top: 150px;
+  /* right: 3rem;
+  left: 3rem; */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  z-index: 900;
+  padding: 20px 0;
+  min-height: 50vh;
+  min-width: 75vw;
+  transform: translateY(0px);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out 0s;
+  background-color: beige;
+  align-items: center;
+}
+
+.a {
+  color: black;
+  textdecoration: none;
+  padding: 12px 16px;
+}
+
+.NavButton {
+  background-color: none;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .NavButton {
+    display: block;
+  }
+
+  .NavLinks {
+    display: none;
+  }
+}

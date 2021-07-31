@@ -8,3 +8,14 @@ Solution
 Commented out all components one by one /- Problem persisted
 Started back with one simple component /- Problem persisted
 Changed the export type in the function to default export using "rafce" /- problem solved
+
+
+trying to use className with react styled components to no avail
+
+changed to regular components and imported css styles from module.css
+
+
+Trying to toggle classes with button
+
+imported useState from react, created const [nav,setNav] = useState("false") variable as well as const ReactNav = () => {setNav(!nav)}
+values in useState are string, classes from style file cannot be string if decoupled
