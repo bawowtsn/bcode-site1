@@ -1,0 +1,17 @@
+[33mcommit e30eff231ce398ac8079e24a16a309b4bf003d93[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: bawowtsn <mactsn@yahoo.com>
+Date:   Sat Jul 31 08:37:22 2021 -0500
+
+    completed reactive nav bar
+
+[33mcommit b31118f7466ffe7174a1b3165248e39a23cf8dbe[m
+Author: bawowtsn <mactsn@yahoo.com>
+Date:   Fri Jul 30 09:02:20 2021 -0500
+
+    created boilerplace component files
+
+[33mcommit 1024ebb8b47b74476929ba14c57254afd5357b22[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: bawowtsn <mactsn@yahoo.com>
+Date:   Wed Jul 28 14:48:12 2021 -0500
+
+    Initial commit from Create Next App

@@ -1,23 +1,64 @@
-import React,{ useState } from 'react'
+import React,{ useState, useEffect } from 'react'
 import Link from 'next/link'
-import { a, NavButton, NavLinks, ReactiveNavLinks, Logo, NavBarContainer, ReactiveNavContainer } from '../styles/Navbar.module.css'
+import { a, NavButton, NavLinks, ReactiveNavLinks, Logo, NavBarContainer, ReactiveNavContainer, dropdown, dropdownContent, navBarId } from '../styles/Navbar.module.css'
+
 
 const Navbar = () => {
     const [nav, setNav] = useState ("false");
-    
-    
+    const [isShrunk, setShrunk] = useState(false);
+
     const ReactiveNav = () => {
         setNav(!nav);
     };
     
+
+    useEffect(() => {
+        const handler = () => {
+        setShrunk((isShrunk) => {
+            if (
+                !isShrunk && (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10)
+            ) {
+            return true;
+            }
+
+            if (
+                isShrunk && document.body.scrollTop < 4 && document.documentElement.scrollTop < 4
+            ) {
+            return false;
+            }
+
+            return isShrunk;
+        });
+        };
+
+        window.addEventListener("scroll", handler);
+        return () => window.removeEventListener("scroll", handler);
+
+    }, []);
+
+    // return <Component isShrunk={isShrunk} />
+    // };
+    
+
+    
+
     return (
 
-        <div className={nav ? NavBarContainer : ReactiveNavContainer}>
+        <div id={isShrunk ? navBarId : null} className={nav ? NavBarContainer : ReactiveNavContainer}>
             <a className={Logo} href='' > &#8492;&#10070;Code&#9854; </a>
             <nav className={nav ? NavLinks : ReactiveNavLinks}>
                 <Link href="/" className={Logo}> Tester</Link>
                  <a href='' className={a} >Technologies</a> 
-                 <a href='' className={a} >Projects</a> 
+                 <div className={dropdown}>
+                    <a href='' >Projects</a>
+                    <div className={dropdownContent}>
+                        <a>Project-1</a>
+                        <a>Project-2</a>
+                        <a>Project-3</a>
+                        <a>Project-4</a>
+                    </div>
+                 </div>
+                  
                  <a className={a} >Timeline</a> 
             </nav>
             <button className={NavButton} onClick={ReactiveNav}>&#9776;</button>
