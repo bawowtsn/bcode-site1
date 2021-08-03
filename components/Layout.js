@@ -1,19 +1,19 @@
 import React from 'react'
-import { Container } from './StyleComponents'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Container from '../styles/Layout.module.css'
 
 
 
 const Layout = ({children}) => {
     return (
-        <Container>
+        <div className={Container}>
             <Navbar/>
                 <main>
                     {children}
                 </main>
             <Footer/>
-        </Container>
+        </div>
     )
 }
 

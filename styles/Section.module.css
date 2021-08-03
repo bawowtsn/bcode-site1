@@ -1,0 +1,42 @@
+.GridSection2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1040px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.LeftSection {
+  width: 100%;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.SectionTitle {
+  font-weight: bold;
+  /* font-size: xx-large; */
+  line-height: normal;
+  max-width: 100%;
+  margin: auto auto 16px;
+  text-align: center;
+}
+
+.SectionText {
+  font-size: medium;
+}
+
+.SectionSubText {
+  font-size: small;
+}
+
+/* /-----------Responsive small screen----------- / */
+
+@media (max-width: 600px) {
+  .LeftSection {
+    flex-basis: 100%;
+  }
+}
