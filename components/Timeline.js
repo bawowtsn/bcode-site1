@@ -5,7 +5,7 @@ import { TimeLineData } from '../constants/constants'
 
 const Timeline = () => {
     return (
-        <div>
+        <div style={{margin:'0 auto 100px'}}>
             <div className={SectionTitle}>
                 <h1>Timeline</h1>
              </div>
