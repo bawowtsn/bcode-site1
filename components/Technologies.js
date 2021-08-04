@@ -5,7 +5,7 @@ import {technologiesData} from '../constants/constants'
 
 const Technologies = () => {
     return (
-        <div >
+        <div style={{maxWidth:'1040px', margin:'auto'}}>
             <div className={SectionTitle}>
                 <h1>Technologies</h1>
             </div>

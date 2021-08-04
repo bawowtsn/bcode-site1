@@ -19,6 +19,8 @@
 .SectionTitle {
   font-weight: bold;
   /* font-size: xx-large; */
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   line-height: normal;
   max-width: 100%;
   margin: auto auto 16px;

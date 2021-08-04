@@ -1,0 +1,142 @@
+.TimeLineRuler {
+  background-color: grey;
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.TimeLineRuler::after {
+  content: "";
+  width: 6px;
+  background-color: white;
+  margin-left: -3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.LeftContainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  left: 0;
+}
+
+/* Creating the arrow */
+.LeftContainer::before {
+  content: " ";
+  height: 0;
+  width: 0;
+
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  z-index: 1;
+}
+
+/* Creating the circle */
+.LeftContainer::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 15px;
+  right: -17px;
+
+  z-index: 1;
+}
+
+.RightContainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  left: 50%;
+}
+
+.RightContainer::before {
+  content: " ";
+  height: 0;
+  width: 0;
+
+  border: medium solid white;
+  border-width: 10px 10px 10px 0px;
+  border-color: transparent white transparent transparent;
+
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  z-index: 1;
+}
+
+.RightContainer::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 15px;
+  left: -17px;
+
+  z-index: 1;
+}
+
+.Content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  /* place the timeline to the left */
+  .TimeLineRuler::after {
+    left: 31px;
+  }
+
+  .LeftContainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .LeftContainer::after {
+    left: 15px;
+  }
+
+  .LeftContainer::before {
+    border-width: 10px 10px 10px 0px;
+    border-color: transparent white transparent transparent;
+
+    position: absolute;
+    top: 22px;
+    left: 60px;
+  }
+  .RightContainer {
+    left: 0;
+    padding-left: 70px;
+    padding-right: 25px;
+    width: 100%;
+  }
+
+  .RightContainer::after {
+    left: 15px;
+  }
+
+  .RightContainer::before {
+    left: 60px;
+  }
+}
